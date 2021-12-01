@@ -51,6 +51,9 @@ html, body {
 
 .button-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
     padding: 10px;
     background-color: yellowgreen;
     border-radius: 10px;
