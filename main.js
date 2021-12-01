@@ -4,7 +4,13 @@ const findGender = async () => {
     let name = document.getElementById('name').value;
     if (checkUserInput(name)) {
         document.getElementById("error-container").style.visibility = 'hidden'; //Hide error container when input name is ok and previous request had errors
-        const response = await fetch('https://api.genderize.io/?name=' + name);
+        let response;
+        await fetch('https://api.genderize.io/?name=' + name).then(r => {
+            response = r;
+        }).catch(err => { // Handle network or server errors
+            document.getElementById("error-container").innerHTML = 'Server can NOT answer right now(error in api)';
+            document.getElementById("error-container").style.visibility = 'visible';
+        });
         let person = {name: '', gender: '', probability: 0, count: 0};
         await response.json().then(result => {  //extract JSON from the http response and store in javascript object
             person.count = result['count'];
