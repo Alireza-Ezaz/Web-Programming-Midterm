@@ -3,7 +3,6 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0; /* Remove html default margin*/
-
 }
 
 .main-container {
@@ -33,8 +32,7 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    width: 50%;
-    /*background-color: cyan;*/
+    width: 50%; /* two columns must get equal width within parent*/
 }
 
 .box-container {
@@ -43,10 +41,10 @@ html, body {
     padding: 10px;
     align-items: flex-start;
     justify-content: center;
-    /*background-color: yellowgreen;*/
     margin-bottom: 30px;
 }
 
+/*This class makes buttons more beautiful*/
 .button-container {
     display: flex;
     justify-content: center;
@@ -56,16 +54,17 @@ html, body {
     background-color: yellowgreen;
     border-radius: 10px;
     border: none;
-    outline: none;
+    outline: none; /* Remove the outline of button*/
     cursor: pointer;
 }
 
-.error-container{
+/* A red container to show errors*/
+.error-container {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: red;
-    color: white;
+    color: white; /* This is the font color */
     padding: 20px;
     border-radius: 20px;
 }
