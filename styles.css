@@ -23,7 +23,7 @@ html, body {
     opacity: 0.8;
     padding: 20px;
     border: 1px solid;
-    border-radius: 20px;
+    border-radius: 30px;
     background-color: white;
     width: 500px;
     height: 350px;
@@ -35,15 +35,16 @@ html, body {
     justify-content: flex-start;
     height: 100%;
     width: 50%;
-    background-color: cyan;
+    /*background-color: cyan;*/
 }
 
 .box-container{
     display: flex;
     flex-direction: column;
+    padding: 10px;
     align-items: flex-start;
     justify-content: center;
-    background-color: yellowgreen;
+    /*background-color: yellowgreen;*/
     margin-bottom: 30px;
 }
 .margin-b-10{
