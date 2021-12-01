@@ -11,10 +11,14 @@ const findGender = async () => {
             person.gender = result['gender'];
             person.probability = result['probability'];
         });
-
         document.getElementById("prediction-probability").innerHTML = person.probability; // show the probability in html
         document.getElementById("prediction-gender").innerHTML = person.gender; // show the gender in html
+        if (person.gender == null) {
+            document.getElementById("error-container").innerHTML = 'Server does not know the answer';
+            document.getElementById("error-container").style.visibility = 'visible';
+        }
     } else {
+        document.getElementById("error-container").innerHTML = 'Name is invalid. Try again with new name';
         document.getElementById("error-container").style.visibility = 'visible'; //Show error container when input name is ok
     }
 }
