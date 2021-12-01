@@ -38,7 +38,7 @@ html, body {
     /*background-color: cyan;*/
 }
 
-.box-container{
+.box-container {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -48,11 +48,20 @@ html, body {
     margin-bottom: 30px;
 }
 
+.button-container {
+    display: flex;
+    padding: 10px;
+    background-color: yellowgreen;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
 /* This class is used wherever we need margin-bottom 10px*/
-.margin-b-10{
+.margin-b-10 {
     margin-bottom: 10px;
 }
 
-#saved-answer{
+#saved-answer {
     border: 2px dashed; /* Border is like -----*/
 }
