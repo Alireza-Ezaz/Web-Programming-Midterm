@@ -21,6 +21,9 @@ const findGender = async () => {
             document.getElementById("error-container").innerHTML = 'Server does not know the answer';
             document.getElementById("error-container").style.visibility = 'visible';
         }
+        if (person.gender != null) {
+            document.getElementById(person.gender.toLowerCase()).checked = true;
+        }
     } else {
         document.getElementById("error-container").innerHTML = 'Name is invalid. Try again with new name';
         document.getElementById("error-container").style.visibility = 'visible'; //Show error container when input name is ok
