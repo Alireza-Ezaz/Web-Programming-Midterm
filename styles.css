@@ -8,6 +8,7 @@ html, body {
 
 .main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Make the children content to be in the center  */
     align-items: center;
     width: 100%;
@@ -56,6 +57,16 @@ html, body {
     border: none;
     outline: none;
     cursor: pointer;
+}
+
+.error-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 /* This class is used wherever we need margin-bottom 10px*/
