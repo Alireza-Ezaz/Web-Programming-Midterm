@@ -17,10 +17,39 @@ html, body {
     background-size: 100% 100%; /* Make the width and height of background image t0 100% */
 }
 
-.form-container {
+.card-container {
     display: flex;
+    flex-direction: row;
     opacity: 0.8;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 20px;
     background-color: white;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 350px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+    background-color: cyan;
+}
+
+.box-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: yellowgreen;
+    margin-bottom: 30px;
+}
+.margin-b-10{
+    margin-bottom: 10px;
+}
+
+#saved-answer{
+    border: 2px dashed;
 }
