@@ -26,8 +26,6 @@ html, body {
     border: 1px solid;
     border-radius: 30px; /* Make the border corners more smooth*/
     background-color: white;
-    width: 500px;
-    height: 350px;
 }
 
 .column {
