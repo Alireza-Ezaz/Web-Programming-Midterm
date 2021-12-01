@@ -1,0 +1,26 @@
+html, body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Remove html default margin*/
+
+}
+
+.main-container {
+    display: flex;
+    justify-content: center; /* Make the children content to be in the center  */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/back1.png");
+    background-repeat: no-repeat; /* Does not let the image to repeat in screen*/
+    background-size: 100% 100%; /* Make the width and height of background image t0 100% */
+}
+
+.form-container {
+    display: flex;
+    opacity: 0.8;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+}
