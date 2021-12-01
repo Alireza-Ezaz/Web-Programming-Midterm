@@ -17,15 +17,15 @@
                     <input id="name">
                 </div>
                 <div class="margin-b-10">
-                    <input name="radio1" type="radio">
+                    <input name="radio1" type="radio" value="Male">
                     <label style="margin-right: 10px">Male</label>
                 </div>
                 <div class="margin-b-10">
-                    <input name="radio1" type="radio">
+                    <input name="radio1" type="radio" value="Female">
                     <label style="margin-right: 10px">Female</label>
                 </div>
                 <button type="button" onclick="findGender()" class="margin-b-10 button-container">Submit</button>
-                <button type="button" class="button-container">Save</button>
+                <button type="button" onclick="saveGender()" class="button-container">Save</button>
             </form>
         </div>
 
@@ -35,18 +35,18 @@
                     Prediction
                 </h1>
                 <div id="prediction-gender" class="margin-b-10">
-                    Male
+                    ...
                 </div>
                 <div id="prediction-probability" class="margin-b-10">
-                    0.97
+                    ...
                 </div>
             </div>
-            <div id="saved-answer" class="box-container">
+            <div  class="saved-answer-container box-container">
                 <h1>
                     Saved Answer
                 </h1>
-                <div class="margin-b-10">
-                    Male
+                <div id="saved-answer" class="margin-b-10">
+                    ...
                 </div>
                 <button class="button-container">
                     Clear

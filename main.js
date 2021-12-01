@@ -1,4 +1,5 @@
 const findGender = async () => {
+    document.getElementById("saved-answer").innerHTML = ''; // empty the saved answer when new request comes
     let name = document.getElementById('name').value;
     if (checkUserInput(name)) {
         document.getElementById("error-container").style.visibility = 'hidden'; //Hide error container when input name is ok
@@ -13,6 +14,9 @@ const findGender = async () => {
         });
         document.getElementById("prediction-probability").innerHTML = person.probability; // show the probability in html
         document.getElementById("prediction-gender").innerHTML = person.gender; // show the gender in html
+        if (localStorage.getItem(name) != null) {
+            document.getElementById("saved-answer").innerHTML = localStorage.getItem(name);
+        }
         if (person.gender == null) {
             document.getElementById("error-container").innerHTML = 'Server does not know the answer';
             document.getElementById("error-container").style.visibility = 'visible';
@@ -23,9 +27,23 @@ const findGender = async () => {
     }
 }
 
+const saveGender = () => {
+    let name = document.getElementById('name').value;
+    let genderToSave = document.querySelector('input[name="radio1"]:checked') != null
+        ? document.querySelector('input[name="radio1"]:checked').value
+        : null;
+    if (checkUserInput(name) && genderToSave != null) {
+        document.getElementById("error-container").style.visibility = 'hidden'; //Hide error container when input name is ok
+        localStorage.setItem(name, genderToSave);
+    } else {
+        document.getElementById("error-container").innerHTML = 'Cannot save. Make sure you selected the gender and typed the name';
+        document.getElementById("error-container").style.visibility = 'visible'; //Show error container when input name is ok
+    }
+}
+
 const checkUserInput = (inp) => {
     let regExpression = /^[a-zA-Z\s]*$/;
-    if (inp.length > 255 || !regExpression.test(inp)) {
+    if (inp.length <= 0 || inp.length > 255 || !regExpression.test(inp)) {
         return false;
     } else {
         return true;

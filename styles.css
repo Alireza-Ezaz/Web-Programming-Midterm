@@ -77,6 +77,6 @@ html, body {
     margin-bottom: 10px;
 }
 
-#saved-answer {
+.saved-answer-container {
     border: 2px dashed; /* Border is like -----*/
 }
