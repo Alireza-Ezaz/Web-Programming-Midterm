@@ -1,5 +1,5 @@
 const findGender = async () => {
-    document.getElementById("saved-answer").innerHTML = ''; // empty the saved answer when new request comes
+    document.getElementById("saved-answer").innerHTML = null; // empty the saved answer when new request comes
     let name = document.getElementById('name').value;
     if (checkUserInput(name)) {
         document.getElementById("error-container").style.visibility = 'hidden'; //Hide error container when input name is ok
@@ -27,7 +27,7 @@ const findGender = async () => {
     }
 }
 
-const saveGender = () => {
+const saveAnswer = () => {
     let name = document.getElementById('name').value;
     let genderToSave = document.querySelector('input[name="radio1"]:checked') != null
         ? document.querySelector('input[name="radio1"]:checked').value
@@ -35,10 +35,20 @@ const saveGender = () => {
     if (checkUserInput(name) && genderToSave != null) {
         document.getElementById("error-container").style.visibility = 'hidden'; //Hide error container when input name is ok
         localStorage.setItem(name, genderToSave);
+        document.getElementById("saved-answer").innerHTML = genderToSave;
     } else {
         document.getElementById("error-container").innerHTML = 'Cannot save. Make sure you selected the gender and typed the name';
         document.getElementById("error-container").style.visibility = 'visible'; //Show error container when input name is ok
     }
+}
+
+const removeSavedAnswer = () => {
+    let savedAnswerToRemove = document.getElementById('saved-answer').innerHTML;
+    console.log(savedAnswerToRemove);
+    if (savedAnswerToRemove != null) {
+        localStorage.removeItem(document.getElementById('name').value);
+    }
+    document.getElementById('saved-answer').innerHTML = null;
 }
 
 const checkUserInput = (inp) => {

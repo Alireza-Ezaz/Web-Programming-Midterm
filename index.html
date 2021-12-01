@@ -25,7 +25,7 @@
                     <label style="margin-right: 10px">Female</label>
                 </div>
                 <button type="button" onclick="findGender()" class="margin-b-10 button-container">Submit</button>
-                <button type="button" onclick="saveGender()" class="button-container">Save</button>
+                <button type="button" onclick="saveAnswer()" class="button-container">Save</button>
             </form>
         </div>
 
@@ -41,14 +41,14 @@
                     ...
                 </div>
             </div>
-            <div  class="saved-answer-container box-container">
+            <div class="saved-answer-container box-container">
                 <h1>
                     Saved Answer
                 </h1>
                 <div id="saved-answer" class="margin-b-10">
                     ...
                 </div>
-                <button class="button-container">
+                <button onclick="removeSavedAnswer()" class="button-container">
                     Clear
                 </button>
             </div>
