@@ -55,6 +55,7 @@ html, body {
     border-radius: 10px;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 /* This class is used wherever we need margin-bottom 10px*/
